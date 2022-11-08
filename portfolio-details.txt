@@ -1,0 +1,77 @@
+https://github.com/zekmos/zekmos-portfolio.git
+
+
+<img src="assets/images/themes/2.png" alt="">
+  <img src="assets/images/themes/3.png" alt=""><img src="assets/images/themes/4.png" alt=""><img src="assets/images/themes/1.png" alt="">
+  <img src="assets/images/themes/5.png" alt=""> <img src="assets/images/themes/1.png" alt="" class="one">
+</div>
+   <div class="container-top">
+
+   </div>
+  <div class="side">
+    <img src="assets/images/themes/docs/profile-pic.png" alt="Portforlio-pic" class="Portforlio-pic">
+    <div class="name"> NAME : MR. MOSES ZEKRUMAH</div>
+    <div class="tit"> CO-FOUNDER : ZEKMOS CODE HUB</div>
+    <div class="job"> PROGRAMMER AMD A WEB DEVELOPER</div>  
+  </div>
+  <div class="container">
+    <div class="data">
+      <div class="fields"> EMAIL:</div>
+      
+    
+      <div class="details"> zekmoscodehub@gmail.com</div>
+      <br>
+      
+      <div class="fields"> TELEPHONE</div>
+      
+      <div class="details"> (+233) 549961525</div>
+      <br>
+      <div class="fields"> MOB NUMBER:</div>
+      <div  class="details"> (+233) 208238880)</div><hr>
+      <br>
+     <div class="edu"> EDUCATIONAL BACKGROUND</div>
+      <br>
+     
+    
+      <div class="details"><span class="tag">INSTITUTION:</span><br> UNIVERSITY OF CAPE COAST</div>
+      <div class="details"><span class="tag">CERTIFICATE AWARDED:</span><br> DIPLOMA IN BASIC EDUCATION</div>
+      <div class="details"><span class="tag">YEAR:</span> 2015</div>
+      <br><br>
+      <div class="details"><span class="tag">INSTITUTION:</span><br> ZAK DE IT SOLUTIONS</div>
+      <div class="details"><span class="tag">CERTIFICATE AWARDED:</span><br> CERTIFICATE IN NETWORKING TECHNOLOGY</div>
+      <div class="details"><span class="tag">YEAR:</span><br> 2018</div>
+      <br><br>
+      <div class="details"><span class="tag">INSTITUTION:</span><br> FREE CODE CAMP (FCC)</div>
+      <div class="details"><span class="tag">CERTIFICATE AWARDED:</span><br>CERTIFICATE IN RESPONSIVE WEBSITE DEVELOPMENT</div>
+      <div class="details"><span class="tag">YEAR:</span><br> 2021</div>
+     <br>
+    </div>
+    
+
+
+  </div>
+    <div class="second">
+<img src="assets/images/themes/brand.png" alt=""class="">
+<h3 class="title">SUMMARY INFOR</h3>
+<p class="details-two">Creative Web Designer incorporates rich media assets and 
+  extensive interactivity to engage and capture audiences. Develops novel architectures and 
+  navigation plans to differentiate final products from existing competition. 
+  Specialize in sites guaranteed to stand out among crowded industries and product categories</p>
+  <img src="assets/images/themes/images/images/brand_2.png" class="pic-two">
+  <p>Experience
+    Web Designer
+    North Tech Computer Solutions Limited - Tamale, Ghana  / Oct 2018 to Current 
+    
+    Designed navigation plans in collaboration with site managers, technical developers and other stakeholders.
+    
+    Addressed user interface issues reported by site visitors, creating remedial measures to smooth interaction and correct weaknesses.
+    
+    Liaised with managers and developers to track and respond to performance of existing sites.
+    
+    Mastered web designs from conception to completion and handled graphic design, artwork and digital application.
+    </p>
+    <i class="fa-solid fa-folder-arrow-down"></i>
+    </div>
+    <div class="third">
+      <img src="assets/images/themes/about.jpg " alt="" class="pic-three">
+    </div>
