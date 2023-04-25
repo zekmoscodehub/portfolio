@@ -1,0 +1,44 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Moses Zekrumah best portfolio web page, web designer, copywriter,content creater, google search adds expert and webdeveloper portfolio page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Portfolio"
+  },
+  "keywords": [
+    "Best",
+    "portfolio",
+    "page",
+    "website",
+    "designer",
+    "portfolio",
+    "web",
+    "developer",
+    "content",
+    "creater",
+    "copywriter",
+    "google",
+    "search",
+    "ads",
+    "expert",
+    "html",
+    "java",
+    "css",
+    "bootstrap",
+    "wordpress",
+    "mediaquery",
+    "programing",
+    "and",
+    "cooding"
+  ],
+  "author": "Moses Zekrumah",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

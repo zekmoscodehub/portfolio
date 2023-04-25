@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 60%;
+}
+.header-top{
+    display:flex;
+    justify-content: space-around;
+    background: radial-gradient(rgb(245, 178, 245),rgb(123, 114, 247)); 
+    min-width: 100vh;
+    height: 40px;
+    position: sticky;
+}
+form{
+    
+    text-align: center;
+    margin-top: 5px;
+}
+
+h1.title{
+    margin-top: 18px;
+    color:#fff;
+    font-family: sans-serif;
+    margin-top: -5px;
+    
+    
+}
+.logo{
+    width: 130px;
+    border-radius: 50%;
+    margin:0px;
+    height:auto;
+}
+.srch{
+    width: 20em;
+    height: 2.8rem;
+    font-size: 12px;
+}
+button.btn1{
+    background-color: rgb(52, 177, 52);
+    height: 2.6rem;
+    padding: 0px 15px;
+    margin-left: -4px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border:none;
+    width: 70px;
+    margin-right: 5px;
+}
+.header-two{
+    display:flex;
+    border:2px solid rgb(241, 210, 241); 
+    min-width: 100vh;
+    height: 60px;
+    font-family: sans-serif;
+    max-height: 100%;
+    flex-wrap: nowrap;
+    overflow:auto;
+}
+
+.menu-links{
+    justify-content: space-between;
+}
+.menu-list{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.menu-list a{
+    font-size: 18px;
+    color:purple;
+    margin: 25px;
+    text-decoration: none;
+}
+.row.main{
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    max-height: 100vh;
+}
+.profile-pic{
+    max-width: 100%;
+    min-width: 100px;
+    position: relative;
+}
+.pic-side{
+    border:1px solid rgb(250, 239, 235);
+    width: 360px;
+}
+
+
+@media (max-width:500px)
+{
+    .title{
+       color:rgb(255, 0, 0);
+       background-color:coral;
+    }
+}
