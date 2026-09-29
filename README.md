@@ -17,10 +17,10 @@ I bridge the gap between human psychology, structured educational pedagogy, and 
 
 ### 🚀 Live Production Architectures
 
-🗂️ **[Zekmos Code Hub Ltd. (Live Portfolio)](https://YOUR_GITHUB_USERNAME.github.io/zekmos-code-hub/)**
+🗂️ **[Zekmos Code Hub Ltd. (Live Portfolio)]**(https://zekmoscodehub.github.io/index.html)**
 *Our elite corporate tech agency showcase page engineered with pure semantic structures, responsive CSS grid configurations, and live client ingestion frameworks.*
 
-📘 **[The EduStream Dashboard Layout](https://YOUR_GITHUB_USERNAME.github.io/zekmos-code-hub/case-study-edtech.html)**
+📘 **[The EduStream Dashboard Layout](https://zekmoscodehub.github.io/case-study-edutech.html)**
 *An advanced instructional UI/UX sandbox environment simulating low-bandwidth, friction-free academic information retrieval matrices.*
 
 ---
@@ -37,6 +37,6 @@ I bridge the gap between human psychology, structured educational pedagogy, and 
 
 Let's collaborate on building next-generation digital products or discuss immediate open vacancies. 
 
-* 💼 **Connect with me via my Portfolio Terminal:** [Zekmos Code Hub Intake](https://YOUR_GITHUB_USERNAME.github.io/zekmos-code-hub/#contact)
-* 📧 **Direct Pipeline Email:** zekmoscodehub@gmail.com / zekmose2015@gmail.com
+* 💼 **Connect with me via my Portfolio Terminal:** [Zekmos Code Hub Intake](https://zekmoscodehub.github.io/index.html/#contact)
+* 📧 **Direct Pipeline Email:** zekmoscodehub@gmail.com 
 * 📱 **Secure Channels:** (+233) 0549961525 / 0208238880
