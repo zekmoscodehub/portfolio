@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zekmos Code Hub Ltd. | Premium Tech Solutions</title>
+    <!-- Google Fonts for High-End Typography -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Premium Dark Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        body {
+            background-color: #0b0f19; /* Deep Tech Dark Blue */
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+        .logo span {
+            color: #00f2fe; /* Premium Cyan Accent */
+        }
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            line-weight: 1.2;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+        .hero p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+        }
+        .cta-btn {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #0b0f19;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease;
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+        }
+                /* Services Section Styling */
+        .services-section {
+            padding: 5rem 10%;
+            background-color: #0b0f19;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-header .subtitle {
+            color: #00f2fe;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-top: 0.5rem;
+            color: #fff;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background-color: #131a2a; /* Lighter container dark blue */
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 2.5rem;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 242, 254, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.05);
+        }
+        .icon-box {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .service-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .service-card p {
+            color: #94a3b8;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .tag {
+            display: inline-block;
+            background-color: rgba(0, 242, 254, 0.1);
+            color: #00f2fe;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+
+                /* Portfolio Showroom Styling */
+        .portfolio-showroom {
+            padding: 6rem 10%;
+            background-color: #0b0f19;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+        }
+        .showroom-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 5rem;
+        }
+        .showroom-header .subtitle {
+            color: #00f2fe;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .showroom-header h2 {
+            font-size: 2.5rem;
+            margin-top: 0.5rem;
+            color: #fff;
+        }
+        .view-all-link {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+            padding-bottom: 0.5rem;
+        }
+        .view-all-link:hover {
+            color: #00f2fe;
+        }
+        .showroom-list {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+        }
+        .project-row {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            background: linear-gradient(180deg, #111827 0%, #0e1420 100%);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 24px;
+            padding: 3.5rem;
+            overflow: hidden;
+        }
+        .project-row.reverse {
+            flex-direction: row-reverse;
+        }
+        .project-info {
+            flex: 1;
+        }
+        .project-category {
+            color: #00f2fe;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .project-info h3 {
+            font-size: 2rem;
+            color: #fff;
+            margin: 0.75rem 0 1.25rem 0;
+        }
+        .project-description {
+            color: #94a3b8;
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            font-size: 0.9rem;
+            color: #64748b;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 1rem;
+        }
+        .project-meta strong {
+            color: #cbd5e1;
+        }
+        .project-btn {
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .project-btn:hover {
+            background-color: #fff;
+            color: #0b0f19;
+            border-color: #fff;
+            transform: translateY(-2px);
+        }
+        .project-visual-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .project-visual-mock {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 16px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.02);
+        }
+        .alt-gradient {
+            background: linear-gradient(135deg, #16222f 0%, #0b131b 100%);
+        }
+        .mock-ui-element {
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            display: flex;
+            gap: 6px;
+        }
+        .mock-ui-element .dot {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        /* Responsive Breakpoint for Showroom */
+        @media (max-width: 968px) {
+            .project-row, .project-row.reverse {
+                flex-direction: column;
+                padding: 2rem;
+            }
+            .project-visual-wrapper {
+                width: 100%;
+            }
+        }
+
+
+                /* Contact Terminal Styling */
+        .contact-terminal {
+            padding: 6rem 10%;
+            background-color: #0b0f19;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+        }
+        .terminal-container {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+        .terminal-logistics {
+            flex: 1;
+        }
+        .terminal-logistics .subtitle {
+            color: #00f2fe;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .terminal-logistics h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin: 0.5rem 0 1.5rem 0;
+        }
+        .terminal-logistics p {
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            font-size: 1.05rem;
+        }
+        .logistics-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .logistics-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            border-left: 2px solid #00f2fe;
+            padding-left: 1rem;
+        }
+        .logistics-item .label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 1px;
+        }
+        .logistics-item .value {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #cbd5e1;
+        }
+        .terminal-form-wrapper {
+            flex: 1.2;
+            background: #111827;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 3rem;
+        }
+        .interactive-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+        .form-group input, .form-group textarea {
+            background-color: #0b0f19;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 1rem;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #00f2fe;
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.1);
+        }
+        .submit-form-btn {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #0b0f19;
+            border: none;
+            padding: 1.1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .submit-form-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 242, 254, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: #475569;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            background-color: #0b0f19;
+        }
+
+        /* Responsive Breakpoint for Contact Terminal */
+        @media (max-width: 968px) {
+            .terminal-container {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            .terminal-form-wrapper {
+                width: 100%;
+                padding: 2rem;
+            }
+        }
+
+
+                /* Ensures Formspree target classes align perfectly with our premium look */
+        .input-field.form-control {
+            width: 100%;
+            background-color: #0b0f19;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 1rem;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+        .input-field.form-control:focus {
+            border-color: #00f2fe;
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.1);
+        }
+        .mb-3 {
+            margin-bottom: 1.5rem;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Zekmos<span>CodeHub</span></div>
+    </nav>
+
+    <section class="hero">
+        <h1>Engineering High-Performance Digital Architectures</h1>
+        <p>We bridge the gap between complex code systems and human-centered design to drive global product strategy.</p>
+        <a href="#" class="cta-btn">Explore Our Solutions</a>
+    </section>
+        <!-- Add this section directly under your </section> (Hero closing tag) -->
+    <section class="services-section">
+        <div class="section-header">
+            <span class="subtitle">OUR EXPERTISE</span>
+            <h2>Tailored Digital Capabilities</h2>
+        </div>
+
+        <div class="services-grid">
+            <!-- Card 1 -->
+            <div class="service-card">
+                <div class="icon-box">💻</div>
+                <h3>UI/UX System Architecture</h3>
+                <p>Decoding complex user workflows into intuitive, elite interaction architectures built for conversion.</p>
+                <span class="tag">Design</span>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card">
+                <div class="icon-box">⚡</div>
+                <h3>Responsive Web Systems</h3>
+                <p>Engineering high-performance, mobile-first frontend interfaces using robust semantic structures.</p>
+                <span class="tag">Frontend</span>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card">
+                <div class="icon-box">🌐</div>
+                <h3>Enterprise CMS Frameworks</h3>
+                <p>Deploying advanced, customized WordPress theme overrides tailored for global performance scaling.</p>
+                <span class="tag">WordPress</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this section directly under your </section> (Services closing tag) -->
+    <section class="portfolio-showroom">
+        <div class="showroom-header">
+            <div>
+                <span class="subtitle">CASE STUDIES</span>
+                <h2>Featured Architectures</h2>
+            </div>
+           <a href="case-study-saas.html" class="project-btn">Explore Case Study</a>
+        </div>
+
+        <div class="showroom-list">
+            <!-- Project 1: EdTech Portal -->
+            <div class="project-row">
+                <div class="project-info">
+                    <span class="project-category">EdTech & Instructional UX</span>
+                    <h3>The EduStream Dashboard</h3>
+                    <p class="project-description">
+                        Decoupling complex academic curriculum flows into a frictionless digital interface. Built to optimize student interaction diagnostics and information discovery.
+                    </p>
+                    <div class="project-meta">
+                        <span><strong>Role:</strong> Lead UX / UI</span>
+                        <span><strong>Tech:</strong> HTML5, CSS Grid</span>
+                    </div>
+                    <a href="case-study-edtech.html" class="project-btn">Explore Case Study</a>
+                </div>
+                <div class="project-visual-wrapper">
+                    <div class="project-visual-mock">
+                        <!-- Visual representation placeholder -->
+                        <div class="mock-ui-element">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: High-Converting Landing Page -->
+            <div class="project-row reverse">
+                <div class="project-info">
+                    <span class="project-category">Conversion Optimization</span>
+                    <h3>SaaS Nexus Interface</h3>
+                    <p class="project-description">
+                        Engineering a high-performance landing experience featuring complex interactive layouts, lightning-fast viewport loading metrics, and custom responsive component systems.
+                    </p>
+                    <div class="project-meta">
+                        <span><strong>Role:</strong> Frontend Dev</span>
+                        <span><strong>Tech:</strong> Bootstrap 4, CSS3</span>
+                    </div>
+                    <a href="#" class="project-btn">Explore Case Study</a>
+                </div>
+                <div class="project-visual-wrapper">
+                    <div class="project-visual-mock alt-gradient">
+                        <div class="mock-ui-element">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Add this section directly under your </section> (Showroom closing tag) -->
+    <section class="contact-terminal">
+        <div class="terminal-container">
+            <!-- Left Panel: Logistics -->
+            <div class="terminal-logistics">
+                <span class="subtitle">SECURE TALENT</span>
+                <h2>Initiate A Global Project</h2>
+                <p>Available for immediate remote engineering pipelines or comprehensive international corporate relocation frameworks.</p>
+                
+                <div class="logistics-list">
+                    <div class="logistics-item">
+                        <span class="label">DEPLOYMENT BASE:</span>
+                        <span class="value">Tamale, Ghana 🇬🇭</span>
+                    </div>
+                    <div class="logistics-item">
+                        <span class="label">TARGET REGIONS:</span>
+                        <span class="value">Europe / Middle East / APAC / NZ</span>
+                    </div>
+                    <div class="logistics-item">
+                        <span class="label">VISA ELIGIBILITY:</span>
+                        <span class="value">Validated International Credentials</span>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Right Panel: The Input Engine (Merged with Formspree Endpoint) -->
+            <div class="terminal-form-wrapper">
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/mrgvldag" method="POST" id="contact" class="interactive-form input-group2">
+                        
+                        <div class="form-group mb-3">
+                            <label for="name">Full Name / Enterprise Name</label>
+                            <input type="text" name="name" class="input-field form-control" id="name" placeholder="Name" required>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="email">Corporate Email Address</label>
+                            <input type="email" name="email" class="input-field form-control" id="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="country">Country of Residence</label>
+                            <input type="text" name="country" class="input-field form-control" id="country" placeholder="Country of resident" required>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="message">Project Parameters / Target Role</label>
+                            <textarea name="message" class="input-field form-control" id="message" rows="5" placeholder="Message.."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-form-btn btn btn-primary submit-btn">Transmit Pipeline Request &rarr;</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sleek Minimal Footer -->
+    <footer>
+        <p>&copy; 2026 Zekmos Code Hub Ltd. All rights engineered under responsive systems.</p>
+    </footer>
+
+</body>
+</html>

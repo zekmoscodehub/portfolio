@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Nexus Case Study | Zekmos Code Hub</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            line-height: 1.7;
+        }
+        /* Subpage Nav */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 10%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #00f2fe;
+        }
+        .back-link {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        .back-link:hover {
+            color: #00f2fe;
+        }
+
+        /* Case Study Header */
+        .cs-header {
+            padding: 6rem 10% 4rem 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .cs-category {
+            color: #00f2fe;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .cs-header h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin: 1rem 0 1.5rem 0;
+            line-height: 1.2;
+        }
+        
+        .cs-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 2rem;
+        }
+        .meta-item .meta-label {
+            display: block;
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+        .meta-item .meta-value {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+
+        /* Main Content Layout */
+        .cs-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+        .cs-section {
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cs-section h2 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1.25rem;
+        }
+        .cs-section p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* SaaS Pricing Component System */
+        .saas-interactive-sandbox {
+            background-color: #111827;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Toggle Switch Layout */
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            background: #0b0f19;
+            padding: 0.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .toggle-btn {
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .toggle-btn.active {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #0b0f19;
+        }
+        
+        /* Pricing Grid Layout */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 850px;
+        }
+        .price-card {
+            background-color: #0e1420;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .price-card.featured {
+            border: 2px solid #00f2fe;
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.05);
+        }
+        .price-card:hover {
+            transform: translateY(-5px);
+        }
+        .price-card.featured:hover {
+            transform: translateY(-5px) scale(1.03);
+        }
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #0b0f19;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .tier-name {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .price-display {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: baseline;
+        }
+        .price-display span {
+            font-size: 1rem;
+            color: #64748b;
+            font-weight: 400;
+            margin-left: 0.25rem;
+        }
+        .feature-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            margin-bottom: 2.5rem;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+        .feature-list li::before {
+            content: "✓";
+            color: #00f2fe;
+            font-weight: 700;
+            margin-right: 0.75rem;
+        }
+        .price-btn {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            margin-top: auto;
+            transition: all 0.2s ease;
+        }
+        .price-card.featured .price-btn {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #0b0f19;
+            border: none;
+        }
+        .price-btn:hover {
+            background-color: #fff;
+            color: #0b0f19;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 0;
+            color: #475569;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .price-card.featured {
+                transform: scale(1);
+            }
+            .price-card.featured:hover {
+                transform: translateY(-5px) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Zekmos<span>CodeHub</span></a>
+        <a href="index.html" class="back-link">&larr; Back to Architectures</a>
+    </nav>
+
+    <header class="cs-header">
+        <span class="cs-category">Case Study: Conversion Optimization</span>
+        <h1>SaaS Nexus Interface</h1>
+        <p style="color: #94a3b8; font-size: 1.2rem; max-width: 800px;">Engineering high-performance component layers to reduce viewport churn metrics and maximize conversion funnel flow rates.</p>
+        
+        <div class="cs-meta-grid">
+            <div class="meta-item">
+                <span class="meta-label">Role</span>
+                <span class="meta-value">Frontend Engineer</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Context</span>
+                <span class="meta-value">Component System Design</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Timeline</span>
+                <span class="meta-value">3 Days (2026)</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Stack</span>
+                <span class="meta-value">Bootstrap 4, Vanilla JS</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="cs-content">
+        <section class="cs-section">
+            <h2>1. The Strategic Objective</h2>
+            <p>SaaS marketing layouts regularly suffer from excessive visual clutter, resulting in increased visitor friction points inside pricing segments. The objective of this project was to construct a lightning-fast, interactive layout structure that dynamically changes pricing states seamlessly without causing standard page flashing or rendering lag.</p>
+        </section>
+
