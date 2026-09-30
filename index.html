@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zekmos Code Hub Ltd. | Premium Tech Solutions</title>
-    <!-- Google Fonts for High-End Typography -->
+    <!-- Google Fonts for Typography -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Base Premium Dark Styling */
+        /* Base Dark Styling */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
         }
         body {
             background-color: #0b0f19; /* Deep Tech Dark Blue */
@@ -73,7 +74,7 @@
         .cta-btn:hover {
             transform: translateY(-3px);
         }
-                /* Services Section Styling */
+                /* Services Section*/
         .services-section {
             padding: 5rem 10%;
             background-color: #0b0f19;
@@ -136,9 +137,76 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
+        /* Base styling for your tag */
+.tag {
+  display: inline-block; /* Required for transform motions to work properly */
+  padding: 6px 14px;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  
+  /* Crucial: Smooths out the return animation when the cursor leaves */
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), 
+              background-color 0.25s ease, 
+              box-shadow 0.25s ease;
+}
+
+/* Base styling for your non-clickable tag */
+.tag {
+  display: inline-block; 
+  position: relative; /* Necessary to contain the shimmer effect */
+  overflow: hidden; /* Clips the shimmer overlay to the tag shape */
+  padding: 6px 14px;
+  background-color: #0b0f19; /* Your brand color */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Soft border for visibility */
+  border-radius: 20px;
+  font-weight: 500;
+  
+  /* Standard arrow pointer instead of hand pointer, signifying it's not a link */
+  cursor: default; 
+  
+  /* Smoothly returns the glow and border to normal when mouse leaves */
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* The Shimmer Layer Overlay */
+.tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%; /* Starts completely hidden on the left */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25), /* The bright white shimmer line */
+    transparent
+  );
+  transform: skewX(-20deg); /* Slants the shimmer line for a slick look */
+}
+
+/* Shimmer and Glow Trigger on Hover */
+.tag:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  
+  /* Creates a soft, ambient neon back-glow */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.25), 
+              0 0 5px rgba(255, 255, 255, 0.1); 
+}
+
+/* Runs the shimmer sweep animation once when hovered */
+.tag:hover::before {
+  left: 150%;
+  transition: left 0.6s cubic-bezier(0.3, 1, 0.2, 1);
+}
 
 
-                /* Portfolio Showroom Styling */
+
+         /* Portfolio Showroom */
         .portfolio-showroom {
             padding: 6rem 10%;
             background-color: #0b0f19;
@@ -285,7 +353,7 @@
         }
 
 
-                /* Contact Terminal Styling */
+                /* Contact Terminal */
         .contact-terminal {
             padding: 6rem 10%;
             background-color: #0b0f19;
@@ -400,7 +468,7 @@
             background-color: #0b0f19;
         }
 
-        /* Responsive Breakpoint for Contact Terminal */
+        /* Breakpoint for Contact Terminal */
         @media (max-width: 968px) {
             .terminal-container {
                 flex-direction: column;
@@ -413,7 +481,7 @@
         }
 
 
-                /* Ensures Formspree target classes align perfectly with our premium look */
+                /* Formspree classes  */
         .input-field.form-control {
             width: 100%;
             background-color: #0b0f19;
@@ -444,11 +512,11 @@
 
     <section class="hero">
         <h1>Engineering High-Performance Digital Architectures</h1>
-        <p>We bridge the gap between complex code systems and human-centered design to drive global product strategy.</p>
-        <a href="#" class="cta-btn">Explore Our Solutions</a>
+        <p>bridging the gap between complex code systems and human-centered design to drive global product strategy.</p>
+        <a href="#services" class="cta-btn">Explore Our Solutions</a>
     </section>
-        <!-- Add this section directly under your </section> (Hero closing tag) -->
-    <section class="services-section">
+        <!-- (Hero setion clossed here) -->
+    <section id="services" class="services-section">
         <div class="section-header">
             <span class="subtitle">OUR EXPERTISE</span>
             <h2>Tailored Digital Capabilities</h2>
@@ -481,7 +549,7 @@
         </div>
     </section>
 
-    <!-- Add this section directly under your </section> (Services closing tag) -->
+    <!-- portfolio setion-->
     <section class="portfolio-showroom">
         <div class="showroom-header">
             <div>
@@ -516,7 +584,7 @@
                 </div>
             </div>
 
-            <!-- Project 2: High-Converting Landing Page -->
+            <!--  Landing Page -->
             <div class="project-row reverse">
                 <div class="project-info">
                     <span class="project-category">Conversion Optimization</span>
@@ -528,7 +596,7 @@
                         <span><strong>Role:</strong> Frontend Dev</span>
                         <span><strong>Tech:</strong> Bootstrap 4, CSS3</span>
                     </div>
-                    <a href="#" class="project-btn">Explore Case Study</a>
+                     <a href="case-study-saas.html" class="project-btn">Explore Case Study</a>
                 </div>
                 <div class="project-visual-wrapper">
                     <div class="project-visual-mock alt-gradient">
@@ -541,8 +609,7 @@
         </div>
     </section>
 
-
-        <!-- Add this section directly under your </section> (Showroom closing tag) -->
+    <!--contact terminals-->
     <section class="contact-terminal">
         <div class="terminal-container">
             <!-- Left Panel: Logistics -->
@@ -567,7 +634,7 @@
                 </div>
             </div>
 
-                        <!-- Right Panel: The Input Engine (Merged with Formspree Endpoint) -->
+                        <!-- Right Panel: The Input Engine with Formspree Endpoint) -->
             <div class="terminal-form-wrapper">
                 <div class="contact-form">
                     <form action="https://formspree.io/f/mrgvldag" method="POST" id="contact" class="interactive-form input-group2">
